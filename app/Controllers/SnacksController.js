@@ -16,11 +16,7 @@ function _drawSnacks(){
 
 
 
-function drawMoney(){
-    let money = appState.money
 
-    setText('addMoney', money += 1)
-}
 
 export class SnacksController{
 
@@ -32,13 +28,17 @@ export class SnacksController{
     increaseMoney(){
         console.log("did it work")
         snacksService.increaseMoney()
-        setText('currentMoney', appState.money += 1)
+        setText('currentMoney', appState.money + 1)
     }
 
     dispenseMoney(){
         let money = appState.money
+        
         if (money <= 0) {
             Pop.toast("Broke Bozo", 'warning', 'center', 3000, true)
+        }else if (money >= 0){
+            console.log('money money')
+        
         }
 
     }

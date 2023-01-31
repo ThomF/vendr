@@ -36,8 +36,9 @@ class AppState extends EventEmitter {
   /** @type {number} */
   money = 0
 
-}
 
+
+}
 
 
 
