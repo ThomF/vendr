@@ -79,7 +79,13 @@
     scroll-behavior: smooth;
   }
 }
-
+.cImg{
+  height: 200px;
+  width: 200px
+}
+.cWidth{
+  width: 205px
+}
 body {
   margin: 0;
   font-family: var(--bs-body-font-family);
