@@ -21,9 +21,14 @@
       <a class="navbar-brand ms-3" href="#">
         <img src="https://fontmeme.com/temporary/ba1dde92d7071867e69d718ae3fd43bc.png" height="100" alt=""
           loading="lazy">
-        <span class="ms-2"></span>
       </a>
+
+      <div class="col-12 text-center">
+        <button class="btn btn-success" onclick="app.snacksController.increaseMoney()">ADD $1</button>
+      </div>
     </nav>
+
+    <span class="ms-2" id="addMoney"></span>
   </header>
   <main>
     <div class="container-fluid">
@@ -44,10 +49,17 @@
       </div>
     </div>
     </div>
+    <div class="row">
+
+    </div>
   </main>
   <footer class="bg-dark text-light">
+    <div class="text-center">
+      <span>CURRENT MONEY</span>
+      <span id="currentMoney"></span>
+    </div>
     <div class="text-center no-select">
-      <p><small>Made with 💖 by CodeWorks</small></p>
+      <p><small>Made with 💖 </small></p>
     </div>
   </footer>
 

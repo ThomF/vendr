@@ -14,22 +14,33 @@ function _drawSnacks(){
     setHTML('vendr', template)
 }
 
-function _drawSnack(){
-    let activeSnack = appState.activeSnack
-    setHTML('active-snack', activeSnack.ActiveTemplate)
-}
+
 
 function drawMoney(){
     let money = appState.money
 
-    setText(money += 1)
+    setText('addMoney', money += 1)
 }
 
-export class SnackController{
+export class SnacksController{
 
 
     constructor(){
         _drawSnacks()
+    }
+
+    increaseMoney(){
+        console.log("did it work")
+        snacksService.increaseMoney()
+        setText('currentMoney', appState.money += 1)
+    }
+
+    dispenseMoney(){
+        let money = appState.money
+        if (money <= 0) {
+            Pop.toast("Broke Bozo", 'warning', 'center', 3000, true)
+        }
+
     }
 
 

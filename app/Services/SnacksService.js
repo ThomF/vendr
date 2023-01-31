@@ -5,7 +5,10 @@ import { saveState } from "../Utils/Store.js"
 class SnacksService {
 
 
-
+    increaseMoney(){
+        appState.money += 1
+        console.log(appState.money);
+    }
 
 
 

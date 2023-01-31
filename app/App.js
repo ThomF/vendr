@@ -1,10 +1,10 @@
 
-import { SnackController } from "./Controllers/SnacksController.js";
+import { SnacksController } from "./Controllers/SnacksController.js";
 import { ValuesController } from "./Controllers/ValuesController.js";
 
 class App {
   // valuesController = new ValuesController();
-  snackController = new SnackController()
+  snacksController = new SnacksController()
 }
 
 window["app"] = new App();
