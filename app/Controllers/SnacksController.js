@@ -16,15 +16,25 @@ function _drawSnacks(){
 }
 
 
+function _drawMoney(){
+    let money = appState.money
+    let template = ''
 
+    template += `$${appState.money}`
+
+    setHTML('currentMoney', template)
+}
 
 
 export class SnacksController{
 
-
     constructor(){
         _drawSnacks()
+        _drawMoney()
+        appState.on('currentMoney', _drawMoney)
     }
+
+
 
     increaseMoney(){
         console.log("did it work")
@@ -40,7 +50,8 @@ export class SnacksController{
     }
 
     dispenseMoney(name){
-        app.snacksService.dispenseMoney(name)
+        console.log('working!')
+        snacksService.dispenseMoney(name)
     }
 }
 
