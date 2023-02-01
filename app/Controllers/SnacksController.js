@@ -48,7 +48,7 @@ export class SnacksController{
             Pop.toast("Broke Bozo", 'warning', 'top-end', 3000, true)
         }else{
             console.log('money money')
-            money -= this.price 
+            money - this.price 
             setText('currentMoney', money)
         }
     }
