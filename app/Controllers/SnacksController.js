@@ -31,12 +31,13 @@ export class SnacksController{
         setText('currentMoney', appState.money + 1)
     }
 
-    dispenseMoney(){
+    dispenseMoney(name){
         let money = appState.money
-        
+        let snacks = appState.snacks
+        let priceFind = snacks.find(name => name.price == name)
         if (money <= 0) {
             Pop.toast("Broke Bozo", 'warning', 'center', 3000, true)
-        }else if (money >= 0){
+        }else if (money == priceFind){
             console.log('money money')
         
         }
