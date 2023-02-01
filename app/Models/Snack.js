@@ -19,7 +19,7 @@ export class Snack{
                     <h5>${this.name}</h5>
                     <p>Handy Item to help you catch Pokemon!</p>
                     <p>$${this.price}</p>
-                    <button class="btn btn-primary" onclick="app.snacksController.dispenseMoney()">BUY</button>
+                    <button class="btn btn-primary" onclick="app.snacksController.dispenseMoney(${this.name})">BUY</button>
                     </div>
             </div>
         </div>

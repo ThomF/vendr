@@ -40,21 +40,9 @@ export class SnacksController{
     }
 
     dispenseMoney(name){
-        let money = appState.money
-        console.log('im working')
-        let snack = appState.snacks
-        let priceFind = snack.find(name => name.price == name)
-        if (money <= 0) {
-            Pop.toast("Broke Bozo", 'warning', 'top-end', 3000, true)
-        }else{
-            console.log('money money')
-            money - this.price 
-            setText('currentMoney', money)
-        }
+        app.snacksService.dispenseMoney(name)
     }
-        
-    }
-
+}
 
 
     
